@@ -1,7 +1,7 @@
 ---
 - name: Check visudo exists
   stat:
-      path: /usr/sbin/visudo
+    path: /usr/sbin/visudo
   register: visudo
 
 - name: Allow admin group sudo without password
@@ -56,7 +56,7 @@
   with_subelements:
     - "{{ users }}"
     - ssh_key
-    - skip_missing: yes
+    - skip_missing: true
   tags: ["users", "configuration"]
 
 - name: Setup user profiles
