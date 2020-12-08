@@ -26,7 +26,8 @@ jobs:
       
       - name: Test role
         run: |
-          "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
+          echo '[defaults]' > ansible.cfg
+          echo 'roles_path = ../' >> ansible.cfg
           ansible-playbook -i localhost, tests/test.yml --syntax-check
           ansible-playbook -i localhost, --connection=local -b tests/test.yml
           ansible-playbook -i localhost, --connection=local -b tests/test.yml | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
