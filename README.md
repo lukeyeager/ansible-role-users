@@ -1,5 +1,7 @@
 # Ansible Role: users
 
+[![CI](https://github.com/unxnn/ansible-role-users/workflows/CI/badge.svg?event=push)](https://github.com/unxnn/ansible-role-users/actions?query=workflow%3ACI)
+
 Role to manage users on a UNIX-based systems.
 
 ## Role configuration
