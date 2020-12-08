@@ -1,4 +1,4 @@
-name: lint-role
+name: test
 on:
   push:
     branches:
